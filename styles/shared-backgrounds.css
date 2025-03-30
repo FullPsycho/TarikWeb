@@ -1,0 +1,40 @@
+.arabic-pattern-bg {
+    position: relative;
+    background: linear-gradient(135deg, 
+        var(--desert-dark) 0%,
+        var(--secondary-color) 100%
+    );
+    overflow: hidden;
+}
+
+.arabic-pattern-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, transparent 0, transparent 2px, var(--accent-color) 3px, transparent 4px) 0 0/40px 40px,
+        radial-gradient(circle at 90% 80%, transparent 0, transparent 2px, var(--accent-color) 3px, transparent 4px) 20px 20px/40px 40px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.arabic-decoration-divider {
+    height: 30px;
+    position: relative;
+    background: var(--desert-light);
+    overflow: hidden;
+}
+
+.arabic-decoration-divider::after {
+    content: '✽ ❈ ✽';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
