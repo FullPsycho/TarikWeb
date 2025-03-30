@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Ride - طريق</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/book-ride.css">
+    <link rel="stylesheet" href="../styles/shared-backgrounds.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="../js/header-loader.js"></script>
+</head>
+<body>
+    <div class="page-bg"></div>
+    <div id="header-placeholder"></div>
+    <div class="content-wrapper">
+        <div class="booking-container">
+            <div class="booking-form">
+                <h2>Book Your Ride</h2>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="pickup">Pickup Location</label>
+                        <input type="text" id="pickup" placeholder="Enter pickup location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" placeholder="Enter destination" required>
+                    </div>
+                    
+                    <div class="ride-options">
+                        <div class="ride-option" data-type="economy">
+                            <img src="../images/economy-car.svg" alt="Economy">
+                            <h3>Economy</h3>
+                            <p>Best price</p>
+                            <span class="price">$10-15</span>
+                        </div>
+                        <div class="ride-option" data-type="comfort">
+                            <img src="../images/comfort-car.svg" alt="Comfort">
+                            <h3>Comfort</h3>
+                            <p>More space</p>
+                            <span class="price">$15-20</span>
+                        </div>
+                        <div class="ride-option" data-type="premium">
+                            <img src="../images/premium-car.svg" alt="Premium">
+                            <h3>Premium</h3>
+                            <p>Luxury ride</p>
+                            <span class="price">$25-30</span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn primary">Book Now</button>
+                </form>
+            </div>
+            <div id="map" class="map-container"></div>
+        </div>
+    </div>
+    <script src="../js/book-ride.js"></script>
+</body>
+</html>
