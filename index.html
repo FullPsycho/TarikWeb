@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" width="device-width, initial-scale=1.0">
     <title>طريق - Your Trusted Ride Service</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/TarikWeb/styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="/TarikWeb/styles/header.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Kufi+Arabic:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -108,12 +108,12 @@
                 loader.classList.add('hidden');
                 mainContent.style.opacity = '1';
                 
-                fetch('./components/header.html')
+                fetch('/TarikWeb/components/header.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('header-placeholder').innerHTML = data;
                         const headerScript = document.createElement('script');
-                        headerScript.src = './js/header.js';
+                        headerScript.src = '/TarikWeb/js/header.js';
                         document.body.appendChild(headerScript);
                     })
                     .catch(error => console.error('Error loading header:', error));
@@ -121,8 +121,8 @@
         });
     </script>
 
-    <script src="js/main.js"></script>
-    <script src="js/particles-config.js"></script>
+    <script src="/TarikWeb/js/main.js"></script>
+    <script src="/TarikWeb/js/particles-config.js"></script>
 </body>
 </html>
 
